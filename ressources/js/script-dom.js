@@ -188,7 +188,7 @@ window.onload = function(){
             };
         }
         if ((sautDino) && (calculSautDino == 100)) {
-            setTimeout(function(){ sautDino = false; }, 150);
+            setTimeout(function(){ sautDino = false; }, 175);
         };
         if ((sautDino == false ) && (calculSautDino > 10)) {
             sautDinoDown10pixels();
