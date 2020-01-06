@@ -2,8 +2,7 @@ window.onload = function(){
 
     // zone du jeu
     var container = document.getElementById('container');
-    container.style.position = "absolute";            
-    container.style.top = "15%";              
+    container.style.position = "absolute";                        
 
     // masque du personnage principal
     var masquePerso = document.getElementById('dinoContainer');
