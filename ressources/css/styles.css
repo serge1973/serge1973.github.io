@@ -90,6 +90,9 @@ h2 {
 #tableauCompetences {
 	margin-top: 20px;
 }
+#tableauCompetences h2 {
+	display: none;
+}
 #tableauCompetences ul {
     padding: 0;
 }
