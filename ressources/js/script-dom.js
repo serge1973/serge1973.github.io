@@ -71,11 +71,11 @@ window.onload = function(){
     var btnPlay = document.getElementById('btn-play');
 
     var animationDino = function() {
+        defilementImagesSpriteDino = defilementImagesSpriteDino - 40;
+        sprite.style.left = defilementImagesSpriteDino + "px";
         if (Math.abs(defilementImagesSpriteDino) > (120)) {
             defilementImagesSpriteDino = 0;
         };
-        defilementImagesSpriteDino = defilementImagesSpriteDino - 40;
-        sprite.style.left = defilementImagesSpriteDino + "px";
     };
 
 
@@ -152,7 +152,7 @@ window.onload = function(){
     };
 
     // affichage des competences
-    var affichageH2TableauCompetences = document.getElementById('h2');
+    // var affichageH2TableauCompetences = document.getElementById('h2');
     var affichageIconJS = document.getElementById('javascript');
     var affichageIconJquery = document.getElementById('jquery');
     var affichageIconHtmlCss = document.getElementById('html-css');
@@ -164,7 +164,7 @@ window.onload = function(){
     var affichageCompetences = function(){
 
         if (score == 30) {
-            affichageH2TableauCompetences.style.display = "inline-block";
+            // affichageH2TableauCompetences.style.display = "inline-block";
             affichageIconJS.style.display = "inline-block";
         } else {
 
