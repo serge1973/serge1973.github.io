@@ -19,10 +19,10 @@ a:hover {
 
 #container {
     /* background: transparent url('../img/background.png') no-repeat 0 0; */
-    border: 1px solid #666;
+    /* border: 1px solid #666; */
     height: 150px;
     overflow: hidden;
-    top: 15%;
+    top: 10%;
     width: 552px;
 }
 
@@ -42,11 +42,11 @@ img#background-clouds {
 img#cactus-simple,
 img#cactus-double,
 img#dino {
-    /* border: 1px solid red; */
     z-index: 30;
 }
 div#dinoContainer {
     z-index: 30;
+    /* overflow: hidden; */
 }
 
 #btn-play {
@@ -72,6 +72,9 @@ h1 {
     font-weight: 500;
     font-size: 1.5em;
 }
+h2 {
+    font-size: 1.25em;
+}
 
 #panel {
     position: absolute;
@@ -80,13 +83,11 @@ h1 {
 }
 
 #mainMessage {
-    position: absolute;
-    top: 40%;
+    margin-top: 40%;
     width: 552px;
 }
 #tableauCompetences {
-    position: absolute;
-    top: 8%;
+	margin-top: 20px;
 }
 #tableauCompetences ul {
     padding: 0;
