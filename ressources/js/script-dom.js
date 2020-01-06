@@ -71,13 +71,14 @@ window.onload = function(){
     var btnPlay = document.getElementById('btn-play');
 
     var animationDino = function() {
-        defilementImagesSpriteDino = defilementImagesSpriteDino - 40;
-        sprite.style.left = defilementImagesSpriteDino + "px";
-        if (Math.abs(defilementImagesSpriteDino) > (120)) {
+        if (Math.abs(defilementImagesSpriteDino) == (120)) {
+            // if (defilementImagesSpriteDino > (120)) {
             defilementImagesSpriteDino = 0;
         };
+        sprite.style.left = defilementImagesSpriteDino + "px";
+        defilementImagesSpriteDino = defilementImagesSpriteDino - 40;
+        console.log(defilementImagesSpriteDino);
     };
-
 
     // defilement des cactus simple
     var animationCactusSimple = function(){
