@@ -46,7 +46,7 @@ img#dino {
 }
 div#dinoContainer {
     z-index: 30;
-    /* overflow: hidden; */
+    overflow: hidden;
 }
 
 #btn-play {
