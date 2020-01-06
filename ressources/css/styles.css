@@ -1,0 +1,107 @@
+
+#main {
+    color: rgb(95, 99, 104);;
+    margin: 0 auto;
+    max-width: 600px;
+    width: 100%;
+}
+a, 
+a:hover, 
+a:active {
+    color: rgb(95, 99, 104);  
+}
+a {
+    text-decoration: underline;
+}
+a:hover {   
+    text-decoration: none;
+}
+
+#container {
+    /* background: transparent url('../img/background.png') no-repeat 0 0; */
+    border: 1px solid #666;
+    /* height: 150px; */
+    /* padding: 1em; */
+    /* position: absolute;
+    top: 25%;
+    width: 552px; */
+    overflow: hidden;
+}
+
+img#background-ground,
+img#background-clouds,
+img#cactus-simple,
+img#cactus-double {
+    position: absolute;
+}
+
+img#background-ground {
+    z-index: 10;
+}
+img#background-clouds {
+    z-index: 20;
+}
+img#cactus-simple,
+img#cactus-double,
+img#dino {
+    /* border: 1px solid red; */
+    z-index: 30;
+}
+div#dinoContainer {
+    z-index: 30;
+}
+
+#btn-play {
+    cursor: pointer;
+    position: absolute;
+    z-index: 30;
+    left: calc(50% - 34px);
+    top: calc(65% - 30px);
+}
+
+.hidden {
+    display: none;
+}
+
+#div-score {
+    position: absolute;
+    z-index: 30;
+    right: 15px;
+    top: 15px;
+}
+
+h1 {
+    font-weight: 500;
+    font-size: 1.5em;
+}
+
+#panel {
+    position: absolute;
+    /* right: 10px;
+    top: 10px; */
+}
+
+#mainMessage {
+    position: absolute;
+    top: 40%;
+    width: 552px;
+}
+#tableauCompetences {
+    position: absolute;
+    top: 8%;
+}
+#tableauCompetences ul {
+    padding: 0;
+}
+#tableauCompetences ul li {
+    display: none;
+}
+#game-over {
+    display: none;
+    font-size: 1.25em;
+    font-weight: 700;
+    position: absolute;
+    z-index: 30;
+    top: 25%;
+    left: 36%;
+}
