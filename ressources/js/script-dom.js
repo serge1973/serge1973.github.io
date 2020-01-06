@@ -13,7 +13,7 @@ window.onload = function(){
     masquePerso.style.left = "20px"; 
     masquePerso.style.height = "43px";
     masquePerso.style.width = "40px";
-    masquePerso.style.overflow = "hidden";     
+    // masquePerso.style.overflow = "hidden";     
 
     // sprite du personnage principal
     var sprite = document.getElementById('dino');
@@ -152,6 +152,7 @@ window.onload = function(){
     };
 
     // affichage des competences
+    var affichageH2TableauCompetences = document.getElementById('h2');
     var affichageIconJS = document.getElementById('javascript');
     var affichageIconJquery = document.getElementById('jquery');
     var affichageIconHtmlCss = document.getElementById('html-css');
@@ -163,6 +164,7 @@ window.onload = function(){
     var affichageCompetences = function(){
 
         if (score == 30) {
+            affichageH2TableauCompetences.style.display = "inline-block";
             affichageIconJS.style.display = "inline-block";
         } else {
 
