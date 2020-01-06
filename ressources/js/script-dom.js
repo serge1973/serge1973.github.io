@@ -11,9 +11,17 @@ window.onload = function(){
     masquePerso.style.position = "absolute";  
     masquePerso.style.bottom = "10px";  
     masquePerso.style.left = "20px"; 
+    masquePerso.style.height = "43px";
+    masquePerso.style.width = "40px";
+    masquePerso.style.overflow = "hidden";     
 
     // sprite du personnage principal
-    // var sprite = document.getElementById('dino');
+    var sprite = document.getElementById('dino');
+    sprite.style.position = "absolute";
+    sprite.style.bottom = "0px";
+    sprite.style.left = "0px";
+    sprite.style.height = "43px";
+    sprite.style.width = "120px";
 
     // bouton play - lancement du jeu
     var btnPlay = document.getElementById('btn-play');
@@ -43,11 +51,12 @@ window.onload = function(){
     cactusDouble.style.width = "32px";
     cactusDouble.style.height = "34px";
 
-    // conversion en nombres entiers des valeurs en pixels correspondant à la position des différents éléments défilants
+    // conversion en nombres entiers des valeurs en pixels correspondant à la position absolue des différents éléments défilants
     var defilementClouds = parseInt(bgClouds.style.left);
     var defilementCactusSimple = parseInt(cactusSimple.style.left);
     var defilementCactusDouble = parseInt(cactusDouble.style.left);
     var defilementGround = parseInt(bgGround.style.left);
+    var defilementImagesSpriteDino = parseInt(sprite.style.left);
 
     // gestion du score
     var score = 0; 
@@ -55,15 +64,25 @@ window.onload = function(){
 
     var collision = false;
 
-    // affichage texte "GAME OVER"
+    // affichage du texte "GAME OVER"
     var gameOverText = document.getElementById('game-over');
-    // affichage icone Bouton Play
+
+    // affichage de l'icone Bouton Play
     var btnPlay = document.getElementById('btn-play');
 
-    // defilement cactus simple
-    var animationCactusSimple = function(arg){
+    var animationDino = function() {
+        if (Math.abs(defilementImagesSpriteDino) > (120)) {
+            defilementImagesSpriteDino = 0;
+        };
+        defilementImagesSpriteDino = defilementImagesSpriteDino - 40;
+        sprite.style.left = defilementImagesSpriteDino + "px";
+    };
+
+
+    // defilement des cactus simple
+    var animationCactusSimple = function(){
         if (defilementCactusSimple < (-23)) {
-            defilementCactusSimple = arg;
+            defilementCactusSimple = 552;
             score = score + 10;
             affichageScore.innerHTML = 'score : ' + score;
         }  
@@ -71,10 +90,10 @@ window.onload = function(){
         cactusSimple.style.left = defilementCactusSimple + 'px';
     };
 
-    // defilement cactus double
-    var animationCactusDouble = function(arg){
+    // defilement des cactus double
+    var animationCactusDouble = function(){
         if (defilementCactusDouble < (-32)) {
-            defilementCactusDouble = arg; 
+            defilementCactusDouble = 552 - 9; 
             score = score + 10;
             affichageScore.innerHTML = 'score : ' + score;
         } 
@@ -82,10 +101,10 @@ window.onload = function(){
         cactusDouble.style.left = defilementCactusDouble + 'px';
     };
 
-    // defilement nuages
-    var animationClouds = function(arg){
+    // defilement des nuages
+    var animationClouds = function(){
         if (defilementClouds < -(1552 - 552)) { // somme (largeur totale image Clouds - largeur ecran)
-            defilementClouds = arg;
+            defilementClouds = 0;
         };
         defilementClouds = defilementClouds - 1;
         bgClouds.style.left = defilementClouds + 'px';
@@ -93,10 +112,10 @@ window.onload = function(){
         // affichageScore.innerHTML = 'score : ' + score;
     };
 
-    // defilement sol
+    // defilement du sol
     var animationGround = function(arg){
         if (defilementGround < -(1552 - 552)) { // somme (largeur totale image Ground - largeur ecran)
-            defilementGround = arg;
+            defilementGround = 0;
         };
         defilementGround = defilementGround - 5;
         bgGround.style.left = defilementGround + 'px';
@@ -109,8 +128,6 @@ window.onload = function(){
             collision = true;
             gameOverText.style.display = "block";
             btnPlay.style.display = "block";
-            // btnPlay.removeAttribute("class");
-            // return boucleAnimation();
         };
 
         var coordonneesMasquePerso = masquePerso.getBoundingClientRect();
@@ -145,23 +162,23 @@ window.onload = function(){
     // Mise en place de la structure conditionnelle permettant l'affichage des compétences
     var affichageCompetences = function(){
 
-        if (score == 50) {
+        if (score == 30) {
             affichageIconJS.style.display = "inline-block";
         } else {
 
-            if (score == 100) {
+            if (score == 60) {
                 affichageIconJquery.style.display = "inline-block";                    
             }
-            if (score == 150) {
+            if (score == 90) {
                 affichageIconHtmlCss.style.display = "inline-block";                    
             }
-            if (score == 200) {
+            if (score == 120) {
                 affichageIconBootstrap.style.display = "inline-block";                    
             }
-            if (score == 250) {
+            if (score == 150) {
                 affichageIconAngular.style.display = "inline-block";                    
             }
-            if (score == 300) {
+            if (score == 180) {
                 affichageIconMongoDB.style.display = "inline-block";                    
             }
 
@@ -173,6 +190,31 @@ window.onload = function(){
     var sautDino = false;
     var autorisationSautDino = true;
     var calculSautDino = parseInt(masquePerso.style.bottom);
+
+    var sautDinoUp10pixels = function(){
+        calculSautDino = calculSautDino + 10;
+        masquePerso.style.bottom = calculSautDino + "px";   
+    };
+    var sautDinoUp6pixels = function(){
+        calculSautDino = calculSautDino + 6;
+        masquePerso.style.bottom = calculSautDino + "px";   
+    };
+    var sautDinoUp2pixels = function(){
+        calculSautDino = calculSautDino + 2;
+        masquePerso.style.bottom = calculSautDino + "px";   
+    };
+    var sautDinoDown10pixels = function(){
+        calculSautDino = calculSautDino - 10;
+        masquePerso.style.bottom = calculSautDino + "px";            
+    };
+    var sautDinoDown6pixels = function(){
+        calculSautDino = calculSautDino - 6; 
+        masquePerso.style.bottom = calculSautDino + "px";            
+    };
+    var sautDinoDown2pixels = function(){
+        calculSautDino = calculSautDino - 2; 
+        masquePerso.style.bottom = calculSautDino + "px";            
+    };
 
     var sautDinoComplet = function(){
 
@@ -203,43 +245,23 @@ window.onload = function(){
 
     };
 
-    var sautDinoUp10pixels = function(){
-        calculSautDino = calculSautDino + 10;
-        masquePerso.style.bottom = calculSautDino + "px";   
-    };
-    var sautDinoUp6pixels = function(){
-        calculSautDino = calculSautDino + 6;
-        masquePerso.style.bottom = calculSautDino + "px";   
-    };
-    var sautDinoUp2pixels = function(){
-        calculSautDino = calculSautDino + 2;
-        masquePerso.style.bottom = calculSautDino + "px";   
-    };
-    var sautDinoDown10pixels = function(){
-        calculSautDino = calculSautDino - 10;
-        masquePerso.style.bottom = calculSautDino + "px";            
-    };
-    var sautDinoDown6pixels = function(){
-        calculSautDino = calculSautDino - 6; 
-        masquePerso.style.bottom = calculSautDino + "px";            
-    };
-    var sautDinoDown2pixels = function(){
-        calculSautDino = calculSautDino - 2; 
-        masquePerso.style.bottom = calculSautDino + "px";            
-    };
-
     // Lancement du jeu
     btnPlay.onclick = function(){
+
+        if(collision){
+            location.reload();
+        }
 
         btnPlay.style.display = "none";
         gameOverText.style.display = "none";
 
         var boucleAnimation = function(){
 
-            animationCactusSimple(552);
-            animationCactusDouble(552 - 9);
-            animationClouds(0);
-            animationGround(0);
+            animationDino();
+            animationCactusSimple();
+            animationCactusDouble();
+            animationClouds();
+            animationGround();
             affichageCompetences();
             sautDinoComplet();
             gestionCollisions();
