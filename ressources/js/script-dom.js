@@ -4,8 +4,6 @@ window.onload = function(){
     var container = document.getElementById('container');
     container.style.position = "absolute";            
     container.style.top = "15%";              
-    container.style.width = "552px";
-    container.style.height = "150px";
 
     // masque du personnage principal
     var masquePerso = document.getElementById('dinoContainer');
