@@ -83,7 +83,7 @@ h2 {
 }
 
 #mainMessage {
-    margin-top: 45%;
+    margin-top: 4%;
     width: 552px;
 }
 #tableauCompetences {
@@ -101,6 +101,6 @@ h2 {
     font-weight: 700;
     position: absolute;
     z-index: 30;
-    top: 25%;
+    top: 20%;
     left: 36%;
 }
