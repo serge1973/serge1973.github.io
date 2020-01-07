@@ -6,14 +6,11 @@ window.onload = function(){
 
     // masque du personnage principal
     var masquePerso = document.getElementById('dinoContainer');
-    // masquePerso.style.width = "40px";
-    // masquePerso.style.height = "43px";
     masquePerso.style.position = "absolute";  
     masquePerso.style.bottom = "10px";  
     masquePerso.style.left = "20px"; 
     masquePerso.style.height = "43px";
-    masquePerso.style.width = "40px";
-    // masquePerso.style.overflow = "hidden";     
+    masquePerso.style.width = "40px";     
 
     // sprite du personnage principal
     var sprite = document.getElementById('dino');
