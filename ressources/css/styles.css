@@ -20,6 +20,7 @@ a:hover {
 #container {
     /* background: transparent url('../img/background.png') no-repeat 0 0; */
     /* border: 1px solid #666; */
+    background-color: #fff;
     height: 150px;
     overflow: hidden;
     top: 10%;
