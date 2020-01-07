@@ -124,8 +124,8 @@ window.onload = function(){
         var gameOver = function(){
             collision = true;
             gameOverText.style.display = "block";
-            btnPlay.style.display = "block";
-            setTimeout(function(){ location.reload(); }, 1000);
+            // btnPlay.style.display = "block";
+            setTimeout(function(){ location.reload(); }, 1500);
         };
 
         var coordonneesMasquePerso = masquePerso.getBoundingClientRect();
