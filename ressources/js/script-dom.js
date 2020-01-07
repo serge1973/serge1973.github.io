@@ -125,8 +125,8 @@ window.onload = function(){
         var gameOver = function(){
             collision = true;
             gameOverText.style.display = "block";
-            // btnPlay.style.display = "block";
-            setTimeout(function(){ location.reload(); }, 1500);
+            btnPlay.style.display = "block";
+            // setTimeout(function(){ location.reload(); }, 1500);
         };
 
         var coordonneesMasquePerso = masquePerso.getBoundingClientRect();
@@ -158,36 +158,47 @@ window.onload = function(){
     var affichageIconBootstrap = document.getElementById('bootstrap');
     var affichageIconAngular = document.getElementById('angular');
     var affichageIconMongoDB = document.getElementById('mongodb');
+    var affichageIconNodeJS = document.getElementById('nodejs');
+    var affichageIconExpressJS = document.getElementById('expressjs');
+    var affichageIconMeteorJS = document.getElementById('meteorjs');
 
     // Mise en place de la structure conditionnelle permettant l'affichage des compétences
     var affichageCompetences = function(){
 
-        if (score == 30) {
+        if (score == 20) {
             affichageH2TableauCompetences.style.display = "inline-block";
             affichageIconJS.style.display = "inline-block";
         } else {
 
-            if (score == 60) {
+            if (score == 40) {
                 affichageIconJquery.style.display = "inline-block";                    
             }
-            if (score == 90) {
+            if (score == 60) {
                 affichageIconHtmlCss.style.display = "inline-block";                    
             }
-            if (score == 120) {
+            if (score == 80) {
                 affichageIconBootstrap.style.display = "inline-block";                    
             }
-            if (score == 150) {
+            if (score == 100) {
                 affichageIconAngular.style.display = "inline-block";                    
             }
-            if (score == 180) {
+            if (score == 120) {
                 affichageIconMongoDB.style.display = "inline-block";                    
             }
-
+            if (score == 140) {
+                affichageIconNodeJS.style.display = "inline-block";                    
+            }
+            if (score == 160) {
+                affichageIconExpressJS.style.display = "inline-block";                    
+            }
+            if (score == 180) {
+                affichageIconMeteorJS.style.display = "inline-block";                    
+            }
         };
 
     };
 
-    // gestion du saut du dino
+    // gestion du saut
     var sautDino = false;
     var autorisationSautDino = true;
     var calculSautDino = parseInt(masquePerso.style.bottom);
@@ -250,6 +261,7 @@ window.onload = function(){
     btnPlay.onclick = function(){
 
         if(collision){
+            location.reload();
             gameOverText.style.display = "block";
         }
 
