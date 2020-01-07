@@ -126,7 +126,7 @@ window.onload = function(){
             collision = true;
             gameOverText.style.display = "block";
             btnPlay.style.display = "block";
-            // setTimeout(function(){ location.reload(); }, 1500);
+            // setTimeout(function(){ location.reload(); }, 3000);
         };
 
         var coordonneesMasquePerso = masquePerso.getBoundingClientRect();
