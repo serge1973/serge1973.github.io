@@ -62,6 +62,7 @@ div#dinoContainer {
 }
 
 #div-score {
+    font-weight: bold;
     position: absolute;
     z-index: 30;
     right: 15px;
