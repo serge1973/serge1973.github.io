@@ -67,13 +67,13 @@ window.onload = function(){
     // affichage de l'icone Bouton Play
     var btnPlay = document.getElementById('btn-play');
 
+    // animation du dino
     var animationDino = function() {
         if (Math.abs(defilementImagesSpriteDino) == (120)) {
             defilementImagesSpriteDino = 0;
         };
         sprite.style.left = defilementImagesSpriteDino + "px";
         defilementImagesSpriteDino = defilementImagesSpriteDino - 40;
-        
     };
 
     // defilement des cactus simple
@@ -121,6 +121,7 @@ window.onload = function(){
     // gestion des collisions
     var gestionCollisions = function(){
 
+        // mise en place game over & rechargement page
         var gameOver = function(){
             collision = true;
             gameOverText.style.display = "block";
@@ -186,7 +187,7 @@ window.onload = function(){
 
     };
 
-    // gestion du saut
+    // gestion du saut du dino
     var sautDino = false;
     var autorisationSautDino = true;
     var calculSautDino = parseInt(masquePerso.style.bottom);
@@ -249,7 +250,6 @@ window.onload = function(){
     btnPlay.onclick = function(){
 
         if(collision){
-            // location.reload();
             gameOverText.style.display = "block";
         }
 
