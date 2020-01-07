@@ -45,8 +45,13 @@ img#dino {
     z-index: 30;
 }
 div#dinoContainer {
+    border-radius: 0 0 20px;
     z-index: 30;
     overflow: hidden;
+    -webkit-border-radius: 0 0 20px;
+    -moz-border-radius: 0 0 20px;
+    -ms-border-radius: 0 0 20px;
+    -o-border-radius: 0 0 20px;
 }
 
 #btn-play {
@@ -79,8 +84,6 @@ h2 {
 
 #panel {
     position: absolute;
-    /* right: 10px;
-    top: 10px; */
 }
 
 #mainMessage {
