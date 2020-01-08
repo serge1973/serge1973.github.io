@@ -49,17 +49,29 @@ img#cactus-simple,
 img#cactus-double {
     position: absolute;
 }
-
 img#background-ground {
     z-index: 10;
 }
 img#background-clouds {
+    width: 1552px;
     z-index: 20;
 }
 img#cactus-simple,
 img#cactus-double,
 img#dino {
     z-index: 30;
+}
+img#cactus-simple {
+    bottom: 11px;
+    left: 552px;
+    height: 46px;
+    width: 23px;
+}
+img#cactus-double {
+    bottom: 11px;
+    left: 752px;
+    height: 34px;
+    width: 32px;
 }
 
 #btn-play {
