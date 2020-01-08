@@ -160,25 +160,27 @@ window.onload = function(){
                 affichageIconJquery.style.display = "block";                    
             }
             if (score == 90) {
-                affichageIconHtml.style.display = "block";  
+                affichageIconHtml.style.display = "block";                     
+            }
+            if (score == 120) {  
                 affichageIconCss.style.display = "block";                    
             }
-            if (score == 120) {
+            if (score == 150) {
                 affichageIconBootstrap.style.display = "block";                    
             }
-            if (score == 150) {
+            if (score == 180) {
                 affichageIconAngular.style.display = "block";                    
             }
-            if (score == 180) {
+            if (score == 210) {
                 affichageIconMongoDB.style.display = "block";                    
             }
-            if (score == 210) {
+            if (score == 240) {
                 affichageIconNodeJS.style.display = "block";                    
             }
-            if (score == 240) {
+            if (score == 270) {
                 affichageIconExpressJS.style.display = "block";                    
             }
-            if (score == 270) {
+            if (score == 300) {
                 affichageIconMeteorJS.style.display = "block";                    
             }
         };
