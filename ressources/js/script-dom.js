@@ -233,9 +233,10 @@ window.onload = function(){
 
         if(collision){
             location.reload();
-        };
-        if(score == 300){
-            location.reload();
+        } else {
+            if(score == 300){
+                location.reload();
+            };
         };
 
         btnPlay.style.display = "none";
