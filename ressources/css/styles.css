@@ -18,13 +18,29 @@ a:hover {
 }
 
 #container {
-    /* background: transparent url('../img/background.png') no-repeat 0 0; */
-    /* border: 1px solid #666; */
     background-color: #fff;
-    /* height: 150px; */
-    /* overflow: hidden; */
-    /* top: 10%; */
-    /* width: 552px; */
+    height: 150px;
+    overflow: hidden;
+    position: absolute;
+    top: 10%;
+    width: 552px;
+}
+
+div#dinoContainer {
+    height: 43px;
+    width: 40px;
+    position: absolute;
+    bottom: 10px;
+    left: 20px;
+    overflow: hidden;
+    z-index: 30;
+}
+img#dino {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 43px;
+    width: 120px;
 }
 
 img#background-ground,
@@ -44,11 +60,6 @@ img#cactus-simple,
 img#cactus-double,
 img#dino {
     z-index: 30;
-}
-div#dinoContainer {
-    z-index: 30;
-    position: absolute;
-    overflow: hidden;
 }
 
 #btn-play {
