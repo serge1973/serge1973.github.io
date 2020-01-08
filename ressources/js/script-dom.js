@@ -211,55 +211,35 @@ window.onload = function(){
     var autorisationSautDino = true;
     var calculSautDino = parseInt(masquePerso.style.bottom);
 
-    var sautDinoUp10pixels = function(){
-        calculSautDino = calculSautDino + 10;
+    var sautDinoPixels = function(pixels) {
+        calculSautDino = calculSautDino + pixels;
         masquePerso.style.bottom = calculSautDino + "px";   
-    };
-    var sautDinoUp6pixels = function(){
-        calculSautDino = calculSautDino + 6;
-        masquePerso.style.bottom = calculSautDino + "px";   
-    };
-    var sautDinoUp2pixels = function(){
-        calculSautDino = calculSautDino + 2;
-        masquePerso.style.bottom = calculSautDino + "px";   
-    };
-    var sautDinoDown10pixels = function(){
-        calculSautDino = calculSautDino - 10;
-        masquePerso.style.bottom = calculSautDino + "px";            
-    };
-    var sautDinoDown6pixels = function(){
-        calculSautDino = calculSautDino - 6; 
-        masquePerso.style.bottom = calculSautDino + "px";            
-    };
-    var sautDinoDown2pixels = function(){
-        calculSautDino = calculSautDino - 2; 
-        masquePerso.style.bottom = calculSautDino + "px";            
     };
 
     var sautDinoComplet = function(){
 
         if ((sautDino) && (calculSautDino < 100)) {
-            sautDinoUp10pixels();
+            sautDinoPixels(10);
         } 
         else {
             if ((sautDino) && (calculSautDino < 40)) {
-                sautDinoUp6pixels();
+                sautDinoPixels(6);
             };
             if ((sautDino) && (calculSautDino < 70)) {
-                sautDinoUp2pixels();
+                sautDinoPixels(2);
             };
         }
         if ((sautDino) && (calculSautDino == 100)) {
             setTimeout(function(){ sautDino = false; }, 175);
         };
         if ((sautDino == false ) && (calculSautDino > 10)) {
-            sautDinoDown10pixels();
+            sautDinoPixels(-10);
         } else {
             if ((sautDino == false ) && (calculSautDino > 40)) {
-                sautDinoDown6pixels();
+                sautDinoPixels(-6);
             };
             if ((sautDino == false ) && (calculSautDino > 70)) {
-                sautDinoDown2pixels();
+                sautDinoPixels(-2);
             };
         }; 
 
@@ -274,7 +254,6 @@ window.onload = function(){
         }
 
         btnPlay.style.display = "none";
-
 
         var boucleAnimation = function(){
 
