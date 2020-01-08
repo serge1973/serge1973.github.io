@@ -49,8 +49,9 @@ window.onload = function(){
     // etat collision par defaut
     var collision = false;
 
-    // affichage du texte "GAME OVER"
+    // affichage des textes "GAME OVER" & "BRAVO"
     var gameOverText = document.getElementById('game-over');
+    var greetingsText = document.getElementById('greetings');
 
     // affichage de l'icone Bouton Play
     var btnPlay = document.getElementById('btn-play');
@@ -181,7 +182,9 @@ window.onload = function(){
                 affichageIconExpressJS.style.display = "block";                    
             }
             if (score == 300) {
-                affichageIconMeteorJS.style.display = "block";                    
+                affichageIconMeteorJS.style.display = "block";  
+                btnPlay.style.display = "block";
+                greetingsText.style.display = "block";               
             }
         };
 
@@ -230,8 +233,10 @@ window.onload = function(){
 
         if(collision){
             location.reload();
-            gameOverText.style.display = "block";
-        }
+        };
+        if(score == 300){
+            location.reload();
+        };
 
         btnPlay.style.display = "none";
 
@@ -245,7 +250,7 @@ window.onload = function(){
             sautDinoComplet();
             gestionCollisions();
             // inversionFiltreCouleur();
-            if (collision){
+            if ((collision) || (score == 300)) {
                 return;
             };
             requestAnimationFrame(boucleAnimation);
