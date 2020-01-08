@@ -102,25 +102,25 @@ window.onload = function(){
     // };
 
     // defilement des cactus simple
-    var animationCactusSimple = function(){
-        if (defilementCactusSimple < (-23)) {
-            defilementCactusSimple = 552;
+    var animationCactusSimple = function(sortieEcran,boucleDefilement,scrollCactus,typeCactus){
+        if (defilementCactusSimple < sortieEcran) {
+            defilementCactusSimple = boucleDefilement;
             score = score + 10;
             affichageScore.innerHTML = 'score : ' + score;
         }; 
-        defilementCactusSimple = defilementCactusSimple - 5;
-        cactusSimple.style.left = defilementCactusSimple + 'px';
+        defilementCactusSimple = defilementCactusSimple - scrollCactus;
+        typeCactus.style.left = defilementCactusSimple + 'px';
     };
 
     // defilement des cactus double
-    var animationCactusDouble = function(){
-        if (defilementCactusDouble < (-32)) {
-            defilementCactusDouble = 552 - 9; 
+    var animationCactusDouble = function(sortieEcran,boucleDefilement,scrollCactus,typeCactus){
+        if (defilementCactusDouble < sortieEcran) {
+            defilementCactusDouble = boucleDefilement; 
             score = score + 10;
             affichageScore.innerHTML = 'score : ' + score;
         };
-        defilementCactusDouble = defilementCactusDouble - 5;
-        cactusDouble.style.left = defilementCactusDouble + 'px';
+        defilementCactusDouble = defilementCactusDouble - scrollCactus;
+        typeCactus.style.left = defilementCactusDouble + 'px';
     };
 
     // defilement des nuages
@@ -278,8 +278,8 @@ window.onload = function(){
 
         var boucleAnimation = function(){
             animationDino();
-            animationCactusSimple();
-            animationCactusDouble();
+            animationCactusSimple(-23,552,5,cactusSimple);
+            animationCactusDouble(-32,543,5,cactusDouble);
             animationClouds();
             animationGround();
             affichageCompetences();
