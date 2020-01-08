@@ -100,7 +100,8 @@ img#cactus-double {
     right: 15px;
     top: 15px;
 }
-#game-over {
+#game-over,
+#greetings {
     display: none;
     font-size: 1.25em;
     font-weight: 700;
@@ -109,7 +110,9 @@ img#cactus-double {
     top: 10%;
     left: 37%;
 }
-
+#greetings {
+    left: 40%;
+}
 #mainMessage {
     margin-top: 45%;
     width: 552px;
