@@ -89,9 +89,9 @@ h2 {
     width: 552px;
 }
 #tableauCompetences {
-	border: 1px solid rgb(95, 99, 104);
+	border: 2px solid rgb(95, 99, 104);
 	border-radius: 3px;
-	height: 515px;
+	height: 465px;
 	position: absolute;
 	right: 20%;
 	top: 10%;
