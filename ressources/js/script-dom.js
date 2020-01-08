@@ -75,7 +75,7 @@ window.onload = function(){
         sprite.style.left = defilementImagesSpriteDino + "px";
         defilementImagesSpriteDino = defilementImagesSpriteDino - 40;
     };
-
+  
     // defilement des cactus simple
     var animationCactusSimple = function(){
         if (defilementCactusSimple < (-23)) {
@@ -165,33 +165,33 @@ window.onload = function(){
     // Mise en place de la structure conditionnelle permettant l'affichage des compétences
     var affichageCompetences = function(){
 
-        if (score == 20) {
+        if (score == 30) {
             // affichageH2TableauCompetences.style.display = "block";
             affichageIconJS.style.display = "block";
         } else {
 
-            if (score == 40) {
+            if (score == 60) {
                 affichageIconJquery.style.display = "block";                    
             }
-            if (score == 60) {
+            if (score == 90) {
                 affichageIconHtmlCss.style.display = "block";                    
             }
-            if (score == 80) {
+            if (score == 120) {
                 affichageIconBootstrap.style.display = "block";                    
             }
-            if (score == 100) {
+            if (score == 150) {
                 affichageIconAngular.style.display = "block";                    
             }
-            if (score == 120) {
+            if (score == 180) {
                 affichageIconMongoDB.style.display = "block";                    
             }
-            if (score == 140) {
+            if (score == 210) {
                 affichageIconNodeJS.style.display = "block";                    
             }
-            if (score == 160) {
+            if (score == 240) {
                 affichageIconExpressJS.style.display = "block";                    
             }
-            if (score == 180) {
+            if (score == 270) {
                 affichageIconMeteorJS.style.display = "block";                    
             }
         };
@@ -199,7 +199,7 @@ window.onload = function(){
     };
 
     var inversionFiltreCouleur = function() {
-        if (score == 20) {
+        if (score == 270) {
             container.style.filter = "invert(100%)";
             container.style.filter = "transition: all 100s ease-out";
         };
