@@ -1,10 +1,3 @@
-
-#main {
-    color: rgb(95, 99, 104);;
-    margin: 0 auto;
-    max-width: 600px;
-    width: 100%;
-}
 a, 
 a:hover, 
 a:active {
@@ -16,7 +9,21 @@ a {
 a:hover {   
     text-decoration: none;
 }
+h1 {
+    font-size: 1.5em;
+    font-weight: 500;
+    margin: 0 0 15px;
+}
+h2 {
+    font-size: 1.25em;
+}
 
+#main {
+    color: rgb(95, 99, 104);;
+    margin: 0 auto;
+    max-width: 600px;
+    width: 100%;
+}
 #container {
     background-color: #fff;
     height: 150px;
@@ -96,15 +103,6 @@ img#cactus-double {
     z-index: 30;
     right: 15px;
     top: 15px;
-}
-
-h1 {
-    font-size: 1.5em;
-    font-weight: 500;
-    margin: 0 0 15px;
-}
-h2 {
-    font-size: 1.25em;
 }
 
 #panel {
