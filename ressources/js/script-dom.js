@@ -21,8 +21,7 @@ window.onload = function(){
     // nuages en arrière plan
     var bgClouds = document.getElementById('background-clouds');
     bgClouds.style.left = "0px";
-    bgClouds.style.top = "0px"; 
-    bgClouds.style.width = "1552px";   
+    bgClouds.style.top = "0px";  
 
     // sol en arrière plan
     var bgGround = document.getElementById('background-ground');
@@ -33,15 +32,11 @@ window.onload = function(){
     var cactusSimple = document.getElementById('cactus-simple');
     cactusSimple.style.left = "552px";
     cactusSimple.style.bottom = "11px";
-    cactusSimple.style.width = "23px";
-    cactusSimple.style.height = "46px";
 
     // cactus double
     var cactusDouble = document.getElementById('cactus-double');
     cactusDouble.style.left = "752px";
     cactusDouble.style.bottom = "11px";
-    cactusDouble.style.width = "32px";
-    cactusDouble.style.height = "34px";
 
     // conversion en nombres entiers des valeurs en pixels correspondant à la position absolue des différents éléments défilants
     var defilementClouds = parseInt(bgClouds.style.left);
