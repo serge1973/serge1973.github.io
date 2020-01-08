@@ -1,0 +1,186 @@
+a, 
+a:hover, 
+a:active {
+    color: rgb(95, 99, 104);  
+}
+a {
+    text-decoration: underline;
+}
+a:hover {   
+    text-decoration: none;
+}
+h1 {
+    font-size: 1.5em;
+    font-weight: 500;
+    margin: 0 0 15px;
+}
+h2 {
+    font-size: 1.25em;
+}
+
+#main {
+    color: rgb(95, 99, 104);;
+    margin: 0 auto;
+    max-width: 600px;
+    width: 100%;
+}
+#container {
+    background-color: #fff;
+    height: 150px;
+    overflow: hidden;
+    position: absolute;
+    top: 10%;
+    width: 552px;
+}
+
+div#dinoContainer {
+    height: 43px;
+    width: 40px;
+    position: absolute;
+    bottom: 10px;
+    left: 20px;
+    overflow: hidden;
+    z-index: 30;
+}
+img#dino {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 43px;
+    width: 120px;
+}
+
+img#background-ground,
+img#background-clouds,
+img#cactus-simple,
+img#cactus-double {
+    position: absolute;
+}
+img#background-ground {
+    bottom: 0;
+    left: 0;
+    z-index: 10;
+}
+img#background-clouds {
+    left: 0;
+    top: 0;
+    width: 1552px;
+    z-index: 20;
+}
+img#cactus-simple,
+img#cactus-double,
+img#dino {
+    z-index: 30;
+}
+img#cactus-simple {
+    bottom: 11px;
+    left: 552px;
+    height: 46px;
+    width: 23px;
+}
+img#cactus-double {
+    bottom: 11px;
+    left: 752px;
+    height: 34px;
+    width: 32px;
+}
+
+#btn-play {
+    cursor: pointer;
+    position: absolute;
+    z-index: 30;
+    left: calc(50% - 34px);
+    top: calc(65% - 30px);
+}
+
+#div-score {
+    font-weight: bold;
+    position: absolute;
+    z-index: 30;
+    right: 15px;
+    top: 15px;
+}
+#game-over {
+    display: none;
+    font-size: 1.25em;
+    font-weight: 700;
+    position: absolute;
+    z-index: 30;
+    top: 20%;
+    left: 37%;
+}
+
+#mainMessage {
+    margin-top: 45%;
+    width: 552px;
+}
+#tableauCompetences {
+	border: 2px solid rgb(95, 99, 104);
+	border-radius: 3px;
+	height: 665px;
+	position: absolute;
+	right: 20%;
+	top: 4%;
+	width: 150px;
+}
+#tableauCompetences h2 {
+	background-color: rgb(95, 99, 104);
+	color: #fff;
+	font-size: 1em;
+	/* font-weight: 700; */
+	margin: 0;
+	padding: 15px 0;
+	text-align: center;
+	width: 100%;
+}
+#tableauCompetences ul {
+    list-style: none;
+    padding: 0;
+}
+#tableauCompetences ul li img {
+    filter: grayscale(100%);
+}
+#tableauCompetences .blocContact ul {
+    margin: 10px;
+}
+#tableauCompetences .blocContact ul li {
+    display: inline;
+}
+#tableauCompetences .blocContact ul li img#github {
+    max-width: 50%;
+    margin: 0 0 0 10px;
+}
+#tableauCompetences .blocContact ul li img#linkedin {
+	max-width: 20%;
+	margin: 0 0 0 5px;
+}
+#tableauCompetences .blocCompetences ul li {
+	display: none;
+	padding: 10px;
+	text-align: center;
+}
+#tableauCompetences .blocCompetences ul li:first-child {
+	padding-top: 20px;
+}
+#tableauCompetences .blocCompetences ul li:last-child {
+    border-radius: 0 0 5px 5px;
+	/* padding-bottom: 25px; */
+}
+#tableauCompetences .blocCompetences ul li img {
+	max-width: 20%;
+}
+#tableauCompetences .blocCompetences ul li#jquery img {
+	max-width: 60%;
+}
+#tableauCompetences .blocCompetences ul li#mongodb img {
+	max-width: 65%;
+}
+#tableauCompetences .blocCompetences ul li#nodejs img {
+	max-width: 50%;
+}
+#tableauCompetences .blocCompetences ul li#expressjs img {
+	max-width: 50%;
+}
+#tableauCompetences .blocCompetences ul li#meteorjs img {
+	max-width: 50%;
+}
