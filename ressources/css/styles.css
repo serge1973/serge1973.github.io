@@ -90,7 +90,7 @@ img#cactus-double {
     position: absolute;
     z-index: 30;
     left: calc(50% - 34px);
-    top: calc(65% - 30px);
+    top: calc(60% - 30px);
 }
 
 #div-score {
@@ -106,7 +106,7 @@ img#cactus-double {
     font-weight: 700;
     position: absolute;
     z-index: 30;
-    top: 20%;
+    top: 10%;
     left: 37%;
 }
 
