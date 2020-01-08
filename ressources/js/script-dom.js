@@ -2,9 +2,6 @@
 
 window.onload = function(){
 
-    // zone du jeu
-    // var container = document.getElementById('container');
-
     // masque du personnage principal
     var masquePerso = document.getElementById('dinoContainer'); 
     masquePerso.style.bottom = "10px";  
@@ -185,14 +182,6 @@ window.onload = function(){
         };
 
     };
-
-    // var inversionFiltreCouleur = function() {
-    //     if (score == 270) {
-    //         container.style.filter = "invert(100%)";
-    //         container.style.filter = "transition: all 100s ease-out";
-    //     };
-    // };
-    // inversionFiltreCouleur();
 
     // gestion du saut
     var sautDino = false;
