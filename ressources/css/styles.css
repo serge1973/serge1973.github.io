@@ -93,84 +93,12 @@ img#cactus-double {
     top: calc(65% - 30px);
 }
 
-.hidden {
-    display: none;
-}
-
 #div-score {
     font-weight: bold;
     position: absolute;
     z-index: 30;
     right: 15px;
     top: 15px;
-}
-
-#panel {
-    position: absolute;
-}
-
-#mainMessage {
-    margin-top: 45%;
-    width: 552px;
-}
-#tableauCompetences {
-	border: 2px solid rgb(95, 99, 104);
-	border-radius: 3px;
-	height: 515px;
-	position: absolute;
-	right: 20%;
-	top: 10%;
-	width: 150px;
-}
-#tableauCompetences h2 {
-	background-color: rgb(95, 99, 104);
-	color: #fff;
-	/* border-radius: 3px 3px 0 0; */
-	/* display: none; */
-	font-size: 1em;
-	font-weight: 700;
-	margin: 0;
-	padding: 15px 0;
-	text-align: center;
-	width: 100%;
-}
-#tableauCompetences ul {
-    padding: 0;
-}
-#tableauCompetences ul li {
-	/* background-color: #efefef; */
-	display: none;
-	/* max-width: 65%; */
-	padding: 10px;
-	text-align: center;
-	/* border-top: 1px solid rgb(95, 99, 104); */
-}
-#tableauCompetences ul li:first-child {
-	padding-top: 20px;
-}
-#tableauCompetences ul li:last-child {
-    border-radius: 0 0 5px 5px;
-	/* padding-bottom: 25px; */
-}
-#tableauCompetences ul li img {
-    /* display: none; */
-    filter: grayscale(100%);
-	max-width: 20%;
-}
-#tableauCompetences ul li#jquery img {
-	max-width: 60%;
-}
-#tableauCompetences ul li#mongodb img {
-	max-width: 65%;
-}
-#tableauCompetences ul li#nodejs img {
-	max-width: 50%;
-}
-#tableauCompetences ul li#expressjs img {
-	max-width: 50%;
-}
-#tableauCompetences ul li#meteorjs img {
-	max-width: 50%;
 }
 #game-over {
     display: none;
@@ -180,4 +108,79 @@ img#cactus-double {
     z-index: 30;
     top: 20%;
     left: 37%;
+}
+
+#mainMessage {
+    margin-top: 45%;
+    width: 552px;
+}
+#tableauCompetences {
+	border: 2px solid rgb(95, 99, 104);
+	border-radius: 3px;
+	height: 665px;
+	position: absolute;
+	right: 20%;
+	top: 4%;
+	width: 150px;
+}
+#tableauCompetences h2 {
+	background-color: rgb(95, 99, 104);
+	color: #fff;
+	font-size: 1em;
+	font-weight: 700;
+	margin: 0;
+	padding: 15px 0;
+	text-align: center;
+	width: 100%;
+}
+#tableauCompetences ul {
+    list-style: none;
+    padding: 0;
+}
+#tableauCompetences ul li img {
+    filter: grayscale(100%);
+}
+#tableauCompetences .blocContact ul {
+    margin: 10px;
+}
+#tableauCompetences .blocContact ul li {
+    display: inline;
+}
+#tableauCompetences .blocContact ul li img#github {
+    max-width: 50%;
+    margin: 0 0 0 10px;
+}
+#tableauCompetences .blocContact ul li img#linkedin {
+	max-width: 20%;
+	margin: 0 0 0 5px;
+}
+#tableauCompetences .blocCompetences ul li {
+	display: none;
+	padding: 10px;
+	text-align: center;
+}
+#tableauCompetences .blocCompetences ul li:first-child {
+	padding-top: 20px;
+}
+#tableauCompetences .blocCompetences ul li:last-child {
+    border-radius: 0 0 5px 5px;
+	/* padding-bottom: 25px; */
+}
+#tableauCompetences .blocCompetences ul li img {
+	max-width: 20%;
+}
+#tableauCompetences .blocCompetences ul li#jquery img {
+	max-width: 60%;
+}
+#tableauCompetences .blocCompetences ul li#mongodb img {
+	max-width: 65%;
+}
+#tableauCompetences .blocCompetences ul li#nodejs img {
+	max-width: 50%;
+}
+#tableauCompetences .blocCompetences ul li#expressjs img {
+	max-width: 50%;
+}
+#tableauCompetences .blocCompetences ul li#meteorjs img {
+	max-width: 50%;
 }
