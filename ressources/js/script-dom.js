@@ -78,28 +78,6 @@ window.onload = function(){
         sprite.style.left = defilementImagesSpriteDino + "px";
         defilementImagesSpriteDino = defilementImagesSpriteDino - 40;
     };
-  
-    // defilement des cactus simple
-    // var animationCactusSimple = function(){
-    //     if (defilementCactusSimple < (-23)) {
-    //         defilementCactusSimple = 552;
-    //         score = score + 10;
-    //         affichageScore.innerHTML = 'score : ' + score;
-    //     }  
-    //     defilementCactusSimple = defilementCactusSimple - 5;
-    //     cactusSimple.style.left = defilementCactusSimple + 'px';
-    // };
-
-    // defilement des cactus double
-    // var animationCactusDouble = function(){
-    //     if (defilementCactusDouble < (-32)) {
-    //         defilementCactusDouble = 552 - 9; 
-    //         score = score + 10;
-    //         affichageScore.innerHTML = 'score : ' + score;
-    //     } 
-    //     defilementCactusDouble = defilementCactusDouble - 5;
-    //     cactusDouble.style.left = defilementCactusDouble + 'px';
-    // };
 
     // defilement des cactus simple
     var animationCactusSimple = function(sortieEcran,boucleDefilement,scrollCactus,typeCactus){
