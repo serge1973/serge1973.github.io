@@ -140,7 +140,8 @@ window.onload = function(){
     // var affichageH2TableauCompetences = document.getElementById('competences');
     var affichageIconJS = document.getElementById('javascript');
     var affichageIconJquery = document.getElementById('jquery');
-    var affichageIconHtmlCss = document.getElementById('html-css');
+    var affichageIconHtml = document.getElementById('html');
+    var affichageIconCss = document.getElementById('css');
     var affichageIconBootstrap = document.getElementById('bootstrap');
     var affichageIconAngular = document.getElementById('angular');
     var affichageIconMongoDB = document.getElementById('mongodb');
@@ -159,7 +160,8 @@ window.onload = function(){
                 affichageIconJquery.style.display = "block";                    
             }
             if (score == 90) {
-                affichageIconHtmlCss.style.display = "block";                    
+                affichageIconHtml.style.display = "block";  
+                affichageIconCss.style.display = "block";                    
             }
             if (score == 120) {
                 affichageIconBootstrap.style.display = "block";                    
