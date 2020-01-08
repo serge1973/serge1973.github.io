@@ -1,7 +1,5 @@
 window.onload = function(){
 
-    var bodyTag = document.getElementsByTagName('body');
-
     // zone du jeu
     var container = document.getElementById('container');
     container.style.position = "absolute";                        
@@ -202,8 +200,6 @@ window.onload = function(){
 
     var inversionFiltreCouleur = function() {
         if (score == 20) {
-            bodyTag.style.filter = "invert(100%)";
-            bodyTag.style.filter = "transition: all 100s ease-out";
             container.style.filter = "invert(100%)";
             container.style.filter = "transition: all 100s ease-out";
         };
