@@ -1,3 +1,5 @@
+"use strict";
+
 window.onload = function(){
 
     // zone du jeu
@@ -59,6 +61,7 @@ window.onload = function(){
     var score = 0; 
     var affichageScore = document.getElementById('div-score');
 
+    // etat collision par defaut
     var collision = false;
 
     // affichage du texte "GAME OVER"
@@ -77,12 +80,34 @@ window.onload = function(){
     };
   
     // defilement des cactus simple
+    // var animationCactusSimple = function(){
+    //     if (defilementCactusSimple < (-23)) {
+    //         defilementCactusSimple = 552;
+    //         score = score + 10;
+    //         affichageScore.innerHTML = 'score : ' + score;
+    //     }  
+    //     defilementCactusSimple = defilementCactusSimple - 5;
+    //     cactusSimple.style.left = defilementCactusSimple + 'px';
+    // };
+
+    // defilement des cactus double
+    // var animationCactusDouble = function(){
+    //     if (defilementCactusDouble < (-32)) {
+    //         defilementCactusDouble = 552 - 9; 
+    //         score = score + 10;
+    //         affichageScore.innerHTML = 'score : ' + score;
+    //     } 
+    //     defilementCactusDouble = defilementCactusDouble - 5;
+    //     cactusDouble.style.left = defilementCactusDouble + 'px';
+    // };
+
+    // defilement des cactus simple
     var animationCactusSimple = function(){
         if (defilementCactusSimple < (-23)) {
             defilementCactusSimple = 552;
             score = score + 10;
             affichageScore.innerHTML = 'score : ' + score;
-        }  
+        }; 
         defilementCactusSimple = defilementCactusSimple - 5;
         cactusSimple.style.left = defilementCactusSimple + 'px';
     };
@@ -93,7 +118,7 @@ window.onload = function(){
             defilementCactusDouble = 552 - 9; 
             score = score + 10;
             affichageScore.innerHTML = 'score : ' + score;
-        } 
+        };
         defilementCactusDouble = defilementCactusDouble - 5;
         cactusDouble.style.left = defilementCactusDouble + 'px';
     };
@@ -110,7 +135,7 @@ window.onload = function(){
     };
 
     // defilement du sol
-    var animationGround = function(arg){
+    var animationGround = function(){
         if (defilementGround < -(1552 - 552)) { // somme (largeur totale image Ground - largeur ecran)
             defilementGround = 0;
         };
@@ -128,7 +153,6 @@ window.onload = function(){
             btnPlay.style.display = "block";
             // setTimeout(function(){ location.reload(); }, 3000);
         };
-
         var coordonneesMasquePerso = masquePerso.getBoundingClientRect();
         var coordonneesCactusSimple = cactusSimple.getBoundingClientRect();
         var coordonneesCactusDouble = cactusDouble.getBoundingClientRect();
@@ -145,7 +169,6 @@ window.onload = function(){
                 coordonneesMasquePerso.height + coordonneesMasquePerso.top > coordonneesCactusDouble.top) {
                 gameOver();
             };
-
         };
         
     };
@@ -169,7 +192,6 @@ window.onload = function(){
             // affichageH2TableauCompetences.style.display = "block";
             affichageIconJS.style.display = "block";
         } else {
-
             if (score == 60) {
                 affichageIconJquery.style.display = "block";                    
             }
@@ -210,7 +232,6 @@ window.onload = function(){
     var sautDino = false;
     var autorisationSautDino = true;
     var calculSautDino = parseInt(masquePerso.style.bottom);
-
     var sautDinoPixels = function(pixels) {
         calculSautDino = calculSautDino + pixels;
         masquePerso.style.bottom = calculSautDino + "px";   
@@ -256,7 +277,6 @@ window.onload = function(){
         btnPlay.style.display = "none";
 
         var boucleAnimation = function(){
-
             animationDino();
             animationCactusSimple();
             animationCactusDouble();
@@ -266,13 +286,10 @@ window.onload = function(){
             sautDinoComplet();
             gestionCollisions();
             // inversionFiltreCouleur();
-
             if (collision){
                 return;
             };
-
             requestAnimationFrame(boucleAnimation);
-
         };
         boucleAnimation();
 
@@ -289,7 +306,6 @@ window.onload = function(){
                 };
                 break;
             };
-
         };
 
     };
