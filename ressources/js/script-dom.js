@@ -3,29 +3,18 @@
 window.onload = function(){
 
     // zone du jeu
-    var container = document.getElementById('container');
-    container.style.position = "absolute";
-    container.style.top = "10%"; 
-    container.style.height = "150px";
-    container.style.width = "552px"; 
-    container.style.overflow = "hidden";                           
+    // var container = document.getElementById('container');
 
     // masque du personnage principal
-    var masquePerso = document.getElementById('dinoContainer');
-    masquePerso.style.position = "absolute";  
+    var masquePerso = document.getElementById('dinoContainer'); 
     masquePerso.style.bottom = "10px";  
-    masquePerso.style.left = "20px"; 
-    masquePerso.style.height = "43px";
-    masquePerso.style.width = "40px";     
+    masquePerso.style.left = "20px";   
 
     // sprite du personnage principal
     var sprite = document.getElementById('dino');
-    sprite.style.position = "absolute";
     sprite.style.bottom = "0px";
     sprite.style.left = "0px";
-    sprite.style.height = "43px";
-    sprite.style.width = "120px";
-
+    
     // bouton play - lancement du jeu
     var btnPlay = document.getElementById('btn-play');
 
