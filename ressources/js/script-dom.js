@@ -198,13 +198,13 @@ window.onload = function(){
 
     };
 
-    var inversionFiltreCouleur = function() {
-        if (score == 270) {
-            container.style.filter = "invert(100%)";
-            container.style.filter = "transition: all 100s ease-out";
-        };
-    };
-    inversionFiltreCouleur();
+    // var inversionFiltreCouleur = function() {
+    //     if (score == 270) {
+    //         container.style.filter = "invert(100%)";
+    //         container.style.filter = "transition: all 100s ease-out";
+    //     };
+    // };
+    // inversionFiltreCouleur();
 
     // gestion du saut
     var sautDino = false;
@@ -286,7 +286,7 @@ window.onload = function(){
             affichageCompetences();
             sautDinoComplet();
             gestionCollisions();
-            inversionFiltreCouleur();
+            // inversionFiltreCouleur();
 
             if (collision){
                 return;
