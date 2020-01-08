@@ -72,8 +72,8 @@ div#dinoContainer {
 }
 
 h1 {
-    font-weight: 500;
     font-size: 1.5em;
+    font-weight: 500;
     margin: 0 0 15px;
 }
 h2 {
@@ -89,16 +89,64 @@ h2 {
     width: 552px;
 }
 #tableauCompetences {
-	margin-top: 20px;
+	border: 1px solid rgb(95, 99, 104);
+	border-radius: 3px;
+	height: 515px;
+	position: absolute;
+	right: 20%;
+	top: 10%;
+	width: 150px;
 }
 #tableauCompetences h2 {
+	background-color: rgb(95, 99, 104);
+	color: #fff;
+	border-radius: 3px 3px 0 0;
 	display: none;
+	font-size: 1em;
+	font-weight: 700;
+	line-height: 2.75em;
+	margin: 0;
+	padding: 0;
+	text-align: center;
+	width: 100%;
 }
 #tableauCompetences ul {
     padding: 0;
 }
 #tableauCompetences ul li {
-    display: none;
+	/* background-color: #efefef; */
+	display: none;
+	/* max-width: 65%; */
+	padding: 10px;
+	text-align: center;
+	/* border-top: 1px solid rgb(95, 99, 104); */
+}
+#tableauCompetences ul li:first-child {
+	padding-top: 20px;
+}
+#tableauCompetences ul li:last-child {
+    border-radius: 0 0 5px 5px;
+	/* padding-bottom: 25px; */
+}
+#tableauCompetences ul li img {
+    /* display: none; */
+    filter: grayscale(100%);
+	max-width: 20%;
+}
+#tableauCompetences ul li#jquery img {
+	max-width: 60%;
+}
+#tableauCompetences ul li#mongodb img {
+	max-width: 65%;
+}
+#tableauCompetences ul li#nodejs img {
+	max-width: 50%;
+}
+#tableauCompetences ul li#expressjs img {
+	max-width: 50%;
+}
+#tableauCompetences ul li#meteorjs img {
+	max-width: 50%;
 }
 #game-over {
     display: none;

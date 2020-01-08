@@ -1,5 +1,7 @@
 window.onload = function(){
 
+    var bodyTag = document.getElementsByTagName('body');
+
     // zone du jeu
     var container = document.getElementById('container');
     container.style.position = "absolute";                        
@@ -151,7 +153,7 @@ window.onload = function(){
     };
 
     // affichage des competences
-    var affichageH2TableauCompetences = document.getElementById('competences');
+    // var affichageH2TableauCompetences = document.getElementById('competences');
     var affichageIconJS = document.getElementById('javascript');
     var affichageIconJquery = document.getElementById('jquery');
     var affichageIconHtmlCss = document.getElementById('html-css');
@@ -166,40 +168,42 @@ window.onload = function(){
     var affichageCompetences = function(){
 
         if (score == 20) {
-            affichageH2TableauCompetences.style.display = "inline-block";
-            affichageIconJS.style.display = "inline-block";
+            // affichageH2TableauCompetences.style.display = "block";
+            affichageIconJS.style.display = "block";
         } else {
 
             if (score == 40) {
-                affichageIconJquery.style.display = "inline-block";                    
+                affichageIconJquery.style.display = "block";                    
             }
             if (score == 60) {
-                affichageIconHtmlCss.style.display = "inline-block";                    
+                affichageIconHtmlCss.style.display = "block";                    
             }
             if (score == 80) {
-                affichageIconBootstrap.style.display = "inline-block";                    
+                affichageIconBootstrap.style.display = "block";                    
             }
             if (score == 100) {
-                affichageIconAngular.style.display = "inline-block";                    
+                affichageIconAngular.style.display = "block";                    
             }
             if (score == 120) {
-                affichageIconMongoDB.style.display = "inline-block";                    
+                affichageIconMongoDB.style.display = "block";                    
             }
             if (score == 140) {
-                affichageIconNodeJS.style.display = "inline-block";                    
+                affichageIconNodeJS.style.display = "block";                    
             }
             if (score == 160) {
-                affichageIconExpressJS.style.display = "inline-block";                    
+                affichageIconExpressJS.style.display = "block";                    
             }
             if (score == 180) {
-                affichageIconMeteorJS.style.display = "inline-block";                    
+                affichageIconMeteorJS.style.display = "block";                    
             }
         };
 
     };
 
     var inversionFiltreCouleur = function() {
-        if (score == 200) {
+        if (score == 20) {
+            bodyTag.style.filter = "invert(100%)";
+            bodyTag.style.filter = "transition: all 100s ease-out";
             container.style.filter = "invert(100%)";
             container.style.filter = "transition: all 100s ease-out";
         };
