@@ -105,7 +105,6 @@ window.onload = function(){
             collision = true;
             gameOverText.style.display = "block";
             btnPlay.style.display = "block";
-            // setTimeout(function(){ location.reload(); }, 3000);
         };
         var coordonneesMasquePerso = masquePerso.getBoundingClientRect();
         var coordonneesCactusSimple = cactusSimple.getBoundingClientRect();
@@ -232,7 +231,6 @@ window.onload = function(){
         btnPlay.style.display = "none";
 
         var boucleAnimation = function(){
-
             animationDino();
             defilementCactusSimple = animationCactus(defilementCactusSimple,-23,552,5,cactusSimple);
             defilementCactusDouble = animationCactus(defilementCactusDouble,-23,552,5,cactusDouble);
