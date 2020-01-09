@@ -99,7 +99,6 @@ window.onload = function(){
 
     // gestion des collisions
     var gestionCollisions = function(){
-
         // mise en place game over & rechargement page
         var gameOver = function(){
             collision = true;
@@ -123,11 +122,9 @@ window.onload = function(){
                 gameOver();
             };
         };
-        
     };
 
     // affichage des competences
-    // var affichageH2TableauCompetences = document.getElementById('competences');
     var affichageIconJS = document.getElementById('javascript');
     var affichageIconJquery = document.getElementById('jquery');
     var affichageIconHtml = document.getElementById('html');
@@ -141,9 +138,7 @@ window.onload = function(){
 
     // Mise en place de la structure conditionnelle permettant l'affichage des compétences
     var affichageCompetences = function(){
-
         if (score == 30) {
-            // affichageH2TableauCompetences.style.display = "block";
             affichageIconJS.style.display = "block";
         } else {
             if (score == 60) {
@@ -176,7 +171,6 @@ window.onload = function(){
                 greetingsText.style.display = "block";               
             }
         };
-
     };
 
     // gestion du saut
@@ -189,7 +183,6 @@ window.onload = function(){
     };
 
     var sautDinoComplet = function(){
-
         if ((sautDino) && (calculSautDino < 100)) {
             sautDinoPixels(10);
         } 
@@ -214,12 +207,12 @@ window.onload = function(){
                 sautDinoPixels(-2);
             };
         }; 
-
     };
 
     // Lancement du jeu
     btnPlay.onclick = function(){
 
+        // rechargement de la page si Bravo ou Game Over
         if(collision){
             location.reload();
         } else {
@@ -228,8 +221,10 @@ window.onload = function(){
             };
         };
 
+        // Bouton Play masqué au click 
         btnPlay.style.display = "none";
 
+        // boucle animations jeu
         var boucleAnimation = function(){
             animationDino();
             defilementCactusSimple = animationCactus(defilementCactusSimple,-23,552,5,cactusSimple);
@@ -247,6 +242,7 @@ window.onload = function(){
         };
         boucleAnimation();
 
+        // Actions clavier
         window.onkeydown = function(event){
             var code = event.keyCode;
             switch(code){
