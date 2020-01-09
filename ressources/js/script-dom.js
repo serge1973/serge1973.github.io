@@ -66,25 +66,15 @@ window.onload = function(){
     };
 
     // defilement des cactus simple
-    var animationCactusSimple = function(sortieEcran,boucleDefilement,scrollCactus,typeCactus){
-        if (defilementCactusSimple < sortieEcran) {
-            defilementCactusSimple = boucleDefilement;
+    var animationCactus = function(defilementCactus,sortieEcran,boucleDefilement,scrollCactus,typeCactus){
+        if (defilementCactus < sortieEcran) {
+            defilementCactus = boucleDefilement;
             score = score + 10;
             affichageScore.innerHTML = 'score : ' + score;
         }; 
-        defilementCactusSimple = defilementCactusSimple - scrollCactus;
-        typeCactus.style.left = defilementCactusSimple + 'px';
-    };
-
-    // defilement des cactus double
-    var animationCactusDouble = function(sortieEcran,boucleDefilement,scrollCactus,typeCactus){
-        if (defilementCactusDouble < sortieEcran) {
-            defilementCactusDouble = boucleDefilement; 
-            score = score + 10;
-            affichageScore.innerHTML = 'score : ' + score;
-        };
-        defilementCactusDouble = defilementCactusDouble - scrollCactus;
-        typeCactus.style.left = defilementCactusDouble + 'px';
+        defilementCactus = defilementCactus - scrollCactus;
+        typeCactus.style.left = defilementCactus + 'px';
+        return defilementCactus;
     };
 
     // defilement des nuages
@@ -242,9 +232,10 @@ window.onload = function(){
         btnPlay.style.display = "none";
 
         var boucleAnimation = function(){
+
             animationDino();
-            animationCactusSimple(-23,552,5,cactusSimple);
-            animationCactusDouble(-32,543,5,cactusDouble);
+            defilementCactusSimple = animationCactus(defilementCactusSimple,-23,552,5,cactusSimple);
+            defilementCactusDouble = animationCactus(defilementCactusDouble,-23,552,5,cactusDouble);
             animationClouds();
             animationGround();
             affichageCompetences();
